@@ -5,6 +5,10 @@ set -x
 #Actualizamos los repositorios
 apt update
 
+#Añadimos el source
+
+source .env
+
 #Actualizamos los paquetes de la máquina 
 
 #apt upgrade -y
@@ -13,5 +17,7 @@ apt update
 
 sudo apt install mysql-server -y
 
+#Configuramos MYSQL para que sólo acepte conexiones desde la IP privada
 
+sed -i "s/127.0.0.1/$MYSQL_PRIVATE_IP/" /etc/mysql/mysql.conf.d/mysqld.cnf
 
