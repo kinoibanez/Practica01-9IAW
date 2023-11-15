@@ -41,9 +41,10 @@ wp core download --locale=es_ES --path=/var/www/html --allow-root
 #Crear el archivo .config, podemos comprobar haciendo un cat cat /var/www/html/wp-config.php si estan bien las variables
 
 wp config create \
-  --dbname=wordpress \
-  --dbuser=wp_user \
-  --dbpass=wp_pass \
+  --dbname=$WORDPRESS_DB_NAME \
+  --dbuser=$WORDPRESS_DB_USER \
+  --dbpass=$WORDPRESS_DB_PASSWORD \
+  --dbhost=$WORDPRESS_DB_HOST \
   --path=/var/www/html \
   --allow-root
 
