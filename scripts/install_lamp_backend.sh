@@ -21,3 +21,9 @@ sudo apt install mysql-server -y
 
 sed -i "s/127.0.0.1/$MYSQL_PRIVATE_IP/" /etc/mysql/mysql.conf.d/mysqld.cnf
 
+
+#Creamos el usuario en MYSQL
+
+DROP USER IF EXISTS '$DB_USER'@'$FRONTEND_PRIVATE_IP';
+CREATE USER '$DB_USER'@'$FRONTEND_PRIVATE_IP' IDENTIFIED BY '$DB_PASS';
+GRANT ALL PRIVILEGES ON '$DB_NAME'.* TO '$DB_USER'@'$FRONTEND_PRIVATE_IP';
