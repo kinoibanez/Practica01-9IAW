@@ -347,3 +347,14 @@ Este repositorio es para la Práctica 1 apartado 9 de IAW.
 
 - Configurado todo lo anterior en cada máquina correspondiente y de manera correcta, y sobre todo con ORDEN. Podremos acceder a nuestro *_WordPress_* a través de nuestro nombre de dominio o con la IP pública de nuestra máquina *_FRONT_END_*
 
+- Si accedemos solamente poniendo el nombre del *_dominio_* accederemos sin ser admin y por lo tanto nos saldrá la página de ejemplo.
+
+    ![](images/cap3.png)
+
+
+- Si accedemos como admin haciendo, podremos configurar totalmente nuestro wordpress de manera gráfica.
+
+    ![](images/cap4.png)
+
+
+- Si podemos hacer esto sin ningún problema y desde admin a través de la interfaz gráfica nos permite poder instalar tanto pluggins, como temas, commo modificar los enlaces permanentes o cualquier otro tipo de parámetro querra decir que esta todo correcto y habremos terminado.
