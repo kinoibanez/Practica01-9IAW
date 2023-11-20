@@ -67,7 +67,8 @@ cp ../htaccess/.htaccess /var/www/html/
 
 # Descargamos un plugin para la seguridad de WordPress
 
-#sudo wp plugin install wp-staging --activate --path=/var/www/html --allow-root
+sudo wp plugin install wp-staging --activate --path=/var/www/html --allow-root
+
 
 #Descargamos un tema cualquiera para la configuración
 
@@ -75,7 +76,21 @@ cp ../htaccess/.htaccess /var/www/html/
 
 #Descargamos un pluggin cualquiera.
 
-#sudo wp plugin install bbpress --activate --path=/var/www/html --allow-root
+wp plugin install bbpress --activate --path=/var/www/html --allow-root
+
+#Links
+
+wp plugin install wps-hide-login --activate --path=/var/www/html --allow-root
+
+
+#Modificar nombres
+
+wp option update whl_page "NotFound" --path=/var/www/html --allow-root
+
+#Coniguramos el nombre de la entrada 
+
+wp rewrite structure '/%postname%/' --path=/var/www/html --allow-root
+
 #Modificamos los permisos de /var/www/html
 
 chown -R www-data:www-data /var/www/html
